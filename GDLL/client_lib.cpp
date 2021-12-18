@@ -701,7 +701,6 @@ namespace GABBE {
 		if (title == "MySave") {
 			WCHAR path[MAX_PATH];
 			if (SUCCEEDED(SHGetFolderPathW(NULL, CSIDL_PROFILE, NULL, 0, path))) {
-				return std::wstring(path) + L"\\AppData\\Local\\Growtopia\\save.dat";
 			} return L"";
 		}
 		if (title == "Config") return CFG::dat_path.length() ? CFG::dat_path : (CFG::dat_path = getUserPath() + L"\\AppData\\Local\\Growtopia\\GABB_cfg.dat");
